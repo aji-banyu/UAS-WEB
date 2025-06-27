@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -43,7 +50,6 @@ header .box-header {
   color: #fff;
   font-size: 32px;
   font-weight: 600;
-  font-family: sans-serif;
 }
 .logo-wrapper .logo-text span {
   color: #ffcc00;
@@ -96,14 +102,14 @@ header .reglog a {
   text-decoration: none;
   color: #ffcc00;
   font-size: 18px;
-  font-family: sans-serif;
   cursor: pointer;
 }
 
 nav {
   width: 100%;
-  padding: 16px 0;
+  padding: 8px 0;
   border-bottom: 2px solid #000;
+  background-color: #d5d5d5;
 }
 
 nav ul {
@@ -116,66 +122,10 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #000;
-  font-size: 22px;
-  font-family: sans-serif;
+  color: #303537;
+  font-size: 20px;
 
 }
-
-main {
-  width: 100%;
-  padding: 16px 0;
-}
-
-main section h2 {
-  font-size: 32px;
-  color: #000;
-  font-weight: 600;
-  font-family: sans-serif;
-  margin-bottom: 12px;
-  margin: 16px 0;
-}
-
-main .main-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-}
-main .item {
-  display: flex;
-  flex-direction: column;
-  padding: 6px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, .6);
-  background-color: #303537;
-  transition: .3s ease;
-  aspect-ratio: 3/4;
-}
-main .item:hover {
-  box-shadow: none;
-}
-main .main-box .item-img{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-main .main-box .item-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: .3s ease;
-}
-main .item:hover .item-img img {
-  transform: scale(1.1);
-}
-main .main-box h4 {
-  text-align: center;
-  color: #fff;
-  padding: 8px 0;
-  font-size: 18px;
-  font-family: sans-serif;
-}
-
-
 
 .dropdown {
   position: relative;
@@ -213,7 +163,7 @@ main .main-box h4 {
 .list-box {
   position: relative;
 }
-.fiksi-list {
+.item-list {
   position: absolute;
   width: max-content;
   background-color: rgb(100, 100, 100);
@@ -223,7 +173,7 @@ main .main-box h4 {
   box-shadow: 0 6px 8px rgba(0, 0, 0, .6);
   z-index: 100;
 }
-.fiksi-list a {
+.item-list a {
   color: #fff;
   padding: 12px 16px;
   text-decoration: none;
@@ -232,10 +182,211 @@ main .main-box h4 {
   width: 100%;
   cursor: default;
 }
-.list-box:hover .fiksi-list {
+.list-box:hover .item-list {
   display: block;
 }
-.list-box .fiksi-list a:hover {
+.list-box .item-list a:hover {
   background-color: rgb(81, 81, 81);
   color: #ffcc00;
 }
+
+
+.hero-section {
+  width: 100%;
+  background-color: #484f52;
+}
+
+.hero-section .hero-box {
+  display: flex;
+  min-height: 60vh;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: saddlebrown; */
+}
+
+.hero-section .hero-box .box:nth-child(1) {
+  line-height: 1.5;
+}
+
+.hero-section .hero-box .box:nth-child(1) h1 {
+  font-size: 64px;
+  color: #303537;
+  color: #fff;
+}
+
+.hero-section .hero-box .box:nth-child(1) h1 span {
+  color: #ffcc00;
+}
+
+.hero-section .hero-box .box:nth-child(1) h2 {
+  font-size: 38px;
+  color: #303537;
+  color: #fff;
+
+}
+
+.hero-section .hero-box .box:nth-child(1) button {
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  background-color: #ffcc00;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.hero-section .hero-box .box:nth-child(1) button a {
+  text-decoration: none;
+  color: #303537;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.hero-section .hero-box .box:nth-child(2) img {
+  width: 500px;
+  margin-bottom: 60px;
+  filter: drop-shadow(30px 20px 4px #000);
+}
+
+
+.best-seller {
+  padding-top: 20px;
+  width: 100%;
+  background-color: #d5d5d5;
+}
+
+.best-seller .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 22px;
+  background-color: #fff;
+  border-bottom: 4px solid #f5f5f5;
+}
+
+.best-seller .top h5 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.best-seller .top a {
+  text-decoration: none;
+  color: #303537;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.best-seller .best-seller-box {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 8px 6px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 10px;
+}
+
+.best-seller .best-seller-box .best-item {
+  /* background-color: aqua; */
+}
+
+.best-seller .best-seller-box .best-item .best-item-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  /* background-color: salmon; */
+}
+
+.best-seller .best-seller-box .best-item .best-item-img img {
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.best-seller .best-seller-box .best-item .best-item-img h5 {
+  width: 100%;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  background: rgba(0, 0, 0, .4);
+  padding: 12px 8px;
+  text-align: center;
+  color: #fff;
+
+}
+
+.best-seller .best-seller-box .best-item h4 {
+  width: 100%;
+  font-size: 18.5px;
+  padding: 20px 10px 30px;
+}
+
+
+main {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #f5f5f5;
+  background-color: #d5d5d5;
+}
+
+main section h2 {
+  width: 100%;
+  background-color: salmon;
+  padding: 14px 0;
+  text-align: center;
+  font-size: 26px;
+  color: #303537;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin: 16px 0;
+  border-bottom: 8px solid #303537;
+  background-color: #fff;
+}
+
+main .main-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+main .item {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .6);
+  background-color: #7d8588;
+  transition: .3s ease;
+  aspect-ratio: 3/4;
+}
+main .item:hover {
+  box-shadow: none;
+}
+main .main-box .item-img{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+main .main-box .item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s ease;
+}
+main .item:hover .item-img img {
+  transform: scale(1.1);
+}
+main .main-box h4 {
+  text-align: center;
+  color: #fff;
+  padding: 8px 0;
+  font-size: 17.5px;
+}
+
+.banner {
+  width: 100%;
+  height: 200px;
+  background-color: salmon;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
