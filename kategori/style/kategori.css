@@ -39,36 +39,43 @@ header h1 {
 .display .display-box {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 10px;
+  gap: 8px;
 }
 
 .display .display-box .display-item {
   display: flex;
   flex-direction: column;
-  padding: 6px;
+  min-height: fit-content;
+  padding: 18px 18px 18px;
+  border-radius: 6px;
   box-shadow: 0 0 12px rgba(0, 0, 0, .6);
   background-color: #303537;
   transition: .3s ease;
-  aspect-ratio: 3/4;
+  aspect-ratio: 3/4.7;
+}
+
+.display .display-box .display-item:hover .item-img {
+  scale: 1.06;
 }
 
 .display .display-box .display-item .item-img {
   width: 100%;
   height: 100%;
+  transition: .3s ease;
   overflow: hidden;
 }
 
 .display .display-box .display-item h4 {
-  text-align: center;
+  /* text-align: center; */
   color: #fff;
-  padding: 12px 0;
-  font-size: 18px;
+  padding: 14px 0;
+  font-size: 16px;
   font-family: sans-serif;
 }
 
 .display .display-box .display-item .info {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: baseline;
   padding-bottom: 4px;
 }
@@ -76,10 +83,9 @@ header h1 {
 .display .display-box .display-item .info .beli,
 .display .display-box .display-item .info .harga {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   width: 100%;
   height: max-content;
-  /* background-color: blueviolet; */
 }
 
 .display .display-box .display-item .info .beli a {
@@ -96,4 +102,17 @@ header h1 {
 
 .display .display-box .display-item .info .harga span {
   color: #ffcc00;
+}
+
+.display::after {
+  content: "Tidak ada produk lain...";
+  display: block;
+  width: max-content;
+  margin: 20px auto;
+  padding: 16px 22px;
+  border-radius: 8px;
+  background-color: #303537;
+  color: #ffcc00;
+  font-size: 18px;
+  cursor: pointer;
 }

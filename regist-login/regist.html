@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Pham.Id</title>
+    <link rel="stylesheet" href="relog.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+        <h2>Daftar ke <span class="highlight">Pham.Id</span></h2>
+        <form action="register.php" method="POST">
+            <label for="fullname">Nama Lengkap</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="username">User Name</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="birthdate">Tanggal Lahir</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <p class="register-link">Sudah punya akun? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
